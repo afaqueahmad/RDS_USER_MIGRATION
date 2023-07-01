@@ -10,3 +10,14 @@ A Python based lambda function to migrate list of all users from one RDS Instanc
 
 # Authentication 
 It uses RDS IAM authentication mechanism for admin access and migration.
+
+
+# Lambda function Invocation
+aws lambda invoke --function-name <function-name> --payload file://test-event.json output.json
+
+
+**test-event.json**
+{
+  "Source_DB": "SOURCE-DB-ENDPOINT",
+  "Target_DB": "TARGET-DB-ENDPOINT"
+}
